@@ -11,19 +11,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController("/baladas")
+@RestController
 public class BaladaController {
 
     @Autowired
     private BaladaService baladaService;
 
-    @PostMapping
+    @PostMapping("/baladas")
     public void salvar(@RequestBody Balada balada) {
         baladaService.salvar(balada);
     }
 
-    @GetMapping
-    public List<Balada> buscarTodas() {
+    @GetMapping("/baladas")
+    public List<Balada> buscarTodas()
+    {
         return baladaService.buscarTodas();
     }
 }
