@@ -22,7 +22,7 @@ public class BaladaService {
     }
 
     public Balada buscarPorId(Long id) {
-        return baladaRepository.getOne(id);
+        return baladaRepository.findById(id).get();
     }
 
     public void excluirPorId(Long id) {
