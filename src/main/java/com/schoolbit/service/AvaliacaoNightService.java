@@ -14,9 +14,19 @@ public class AvaliacaoNightService {
     private AvaliacaoNightRepository avaliacaoNightRepository;
 
     public void salvar(AvaliacaoNight avaliacaoNight){
+
         avaliacaoNightRepository.save(avaliacaoNight);
     }
+
     public List<AvaliacaoNight> buscarTodas() {
+
         return avaliacaoNightRepository.findAll();
+    }
+
+    public AvaliacaoNight buscarPorId(Long id) {
+        return avaliacaoNightRepository.findById(id).orElse(null);
+    }
+    public void excluirPorId(Long id) {
+        avaliacaoNightRepository.deleteById(id);
     }
 }
