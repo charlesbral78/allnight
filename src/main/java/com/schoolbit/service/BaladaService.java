@@ -20,4 +20,12 @@ public class BaladaService {
     public List<Balada> buscarTodas() {
         return baladaRepository.findAll();
     }
+
+    public Balada buscarPorId(Long id) {
+        return baladaRepository.getOne(id);
+    }
+
+    public void excluirPorId(Long id) {
+        baladaRepository.deleteById(id);
+    }
 }
