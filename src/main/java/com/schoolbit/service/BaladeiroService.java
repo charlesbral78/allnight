@@ -15,5 +15,15 @@ public class BaladeiroService {
 
     public void salvar(Baladeiro baladeiro) { baladeiroRepository.save(baladeiro); }
 
-    public List<Baladeiro> buscarTodos() { return baladeiroRepository.findAll(); }
+    public List<Baladeiro> buscarTodos() {
+        return baladeiroRepository.findAll();
+    }
+
+    public Baladeiro buscarPorId(Long id) {
+        return baladeiroRepository.findById(id).orElse(null);
+    }
+
+    public void excluirPorId(Long id) {
+        baladeiroRepository.deleteById(id);
+    }
 }
