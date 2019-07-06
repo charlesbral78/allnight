@@ -1,8 +1,6 @@
 package com.schoolbit.model;
 
-
 import lombok.Data;
-import lombok.Generated;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,10 +14,10 @@ public class Estilo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome_do_estilo;
-    private String descricao_do_estilo;
-    private String imagem;
-    private String autor_da_dica;
-    private String onde_comprar;
+    private String nome;
+    private String descricao;
+    private String imagemUrl;
+    private String autorDaDica;
+    private String ondeComprar;
 
 }

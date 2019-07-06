@@ -20,7 +20,7 @@ public class BaladeiroService {
     }
 
     public Baladeiro buscarPorId(Long id) {
-        return baladeiroRepository.findById(id).get();
+        return baladeiroRepository.findById(id).orElse(null);
     }
 
     public void excluirPorId(Long id) {
